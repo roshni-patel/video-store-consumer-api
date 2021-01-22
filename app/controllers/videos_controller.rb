@@ -26,8 +26,8 @@ class VideosController < ApplicationController
 
     if @video.save
       render(
-        json: @video.as_json(only: [:title, :overview, :release_date, :inventory, :image_url, :external_id), 
-        status: :ok
+        json: @video.as_json(only: [:title, :overview, :release_date, :inventory, :image_url, :external_id]),
+        status: :ok)
       return
     else
       render json: {
